@@ -1,0 +1,63 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  min-height: 100%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -50px;
+}
+.footer,
+.push {
+  height: 50px;
+}
+
+.navbar-brand img {
+	width: 40%;
+}
+
+.navbar-nav {
+	font-family: 'Arimo', sans-serif;
+}
+
+.dropdown {
+	direction: rtl;
+}
+
+.dropdown-menu {
+	text-align: left;;
+}
+.navbar-nav li {
+	float: right;
+}
+
+.clear {
+	clear: right;
+}
+
+#top {
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+    padding: 0 10px;
+    line-height: 40px;
+    font-size: 12px;
+}
+
+#calendar {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 10px;
+}
+
+.dropdown-menu {
+	text-align: right;
+}
+
+header.masthead {
+	padding-top: 9%;
+	padding-bottom: 30%;
+}
+
+
