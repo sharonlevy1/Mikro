@@ -8,193 +8,97 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Schedule</title>
+    <title>Schedule></title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
+     <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/one-page-wonder.min.css" rel="stylesheet">
 
     <!-- Additional CSS -->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/schedule.css">
 
-    <script>
-
-      var CALENDAR = function () { 
-      var wrap, label,  
-              months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]; 
- 
-      function init(newWrap) { 
-        wrap     = $(newWrap || "#cal"); 
-        label    = wrap.find("#label"); 
-        wrap.find("#prev").bind("click.calendar", function () { 
-          switchMonth(false); }); 
-        wrap.find("#next").bind("click.calendar", function () { switchMonth(true);  }); 
-        label.bind("click", function () { switchMonth(null, new Date().getMonth(), new Date().getFullYear()); });        
-        label.click();
-      } 
- 
-      function switchMonth(next, month, year) { 
-         var curr = label.text().trim().split(" "), calendar, tempYear =  parseInt(curr[1], 10); 
-         month = month || ((next) ? ( (curr[0] === "December") ? 0 : months.indexOf(curr[0]) + 1 ) : ( (curr[0] === "January") ? 11 : months.indexOf(curr[0]) - 1 )); 
-         year = year || ((next && month === 0) ? tempYear + 1 : (!next && month === 11) ? tempYear - 1 : tempYear);
-
-         if (!month) { 
-          if (next) { 
-            if (curr[0] === "December") { 
-              month = 0; 
-              }
-                        } else { 
-              month = months.indexOf(curr[0]) + 1; 
-          } 
-      } else { 
-          if (curr[0] === "January") { 
-              month = 11; 
-          } else { 
-              month = months.indexOf(curr[0]) - 1; 
-          } 
-      } 
-  }
- 
-      function createCal(year, month) { 
- 
-      } 
-      createCal.cache = {}; 
-      return { 
-          init : init, 
-          switchMonth : switchMonth, 
-          createCal   : createCal 
-      }; 
-    };
-
-    </script>
+    <script src="schedule.js"></script>
 
   </head>
 
   <body>
     <div class="wrapper">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="index.html"><img src="img/logo.png"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">אילוצים</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">שיבוצים</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ניהול
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">ניהול הצגות</a>
-                <a class="dropdown-item" href="#">ניהול עובדים</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">פתח חלון זמנים</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <div class="clear"></div>
-
-    <header class="masthead text-center text-white">
-      <div class="masthead-content">
-        <div class="container">
-          <div id="cal">
-            <div class="header">
-              <span class="left button" id="prev"> &lang; </span> 
-              <span class="left hook"></span> 
-              <span class="month-year" id="label"> June 20&0 </span> 
-              <span class="right hook"></span> 
-              <span class="right button" id="next"> &rang; </span>
-
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+          <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">אילוצים</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">שיבוצים</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ניהול
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">ניהול הצגות</a>
+                    <a class="dropdown-item" href="#">ניהול עובדים</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">פתח חלון זמנים</a>
+                  </div>
+                </li>
+              </ul>
             </div>
-            <table id="days">
-              <td>sun</td> 
-              <td>mon</td> 
-              <td>tue</td> 
-              <td>wed</td> 
-              <td>thu</td> 
-              <td>fri</td> 
-              <td>sat</td>
+          </div>
+        </nav>
 
+        <div class="clear"></div>
+
+      <header class="masthead text-center text-white">
+        <div class="masthead-content">
+          <div class="container">
+
+            <h2 class="masthead-subheading mb-0">שיבוצים</h2>
+            
+            <table align="center" border=1 cellpadding=2>
+              <tr>
+                <th>Sun <th>Mon <th>Tue <th>Wed <th>Thu <th>Fri <th>Sat
+              </tr>
+              <tr>
+                <td> <td> <td> <td> <td>1 <td>2 <td>3
+              </tr>
+              <tr>
+                <td>4 <td>5 <td>6 <td>7 <td>8 <td>9 <td>10
+              </tr>
+              <tr>
+                <td>11 <td>12 <td>13 <td>14 <td>15 <td>16 <td>17
+              </tr>
+              <tr>
+                <td>18 <td>19 <td>20 <td>21 <td>22 <td>23 <td>24
+              </tr>
+              <tr>
+                <td>25 <td>26 <td>27 <td>28 <td>29 <td>30 <td>
+              </tr>
             </table>
-            <div id="cal-frame">
-              <table class="curr"> 
-                <tbody> 
-                  <tr>
-                    <td class="nil"></td>
-                    <td class="nil"></td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                  </tr> 
-                  <tr>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                    <td>10</td>
-                    <td class="today">11</td>
-                    <td>12</td>
-                  </tr>
-                  <tr>
-                    <td>13</td>
-                    <td>14</td>
-                    <td>15</td>
-                    <td>16</td>
-                    <td>17</td>
-                    <td>18</td>
-                    <td>19</td>
-                  </tr>
-                  <tr>
-                    <td>20</td>
-                    <td>21</td>
-                    <td>22</td>
-                    <td>23</td>
-                    <td>24</td>
-                    <td>25</td>
-                    <td>26</td>
-                  </tr> 
-                  <tr>
-                    <td>27</td>
-                    <td>28</td>
-                    <td>29</td>
-                    <td>30</td>
-                    <td class="nil"></td>
-                    <td class="nil"></td>
-                    <td class="nil"></td>
-                  </tr> 
-                </tbody>
-              </table>
 
-              </div>
-              </div>          
 
-          <h2 class="masthead-subheading mb-0">Will Rock Your Socks Off</h2>
-          <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a>
+          </div>
         </div>
-      </div>
-    </header>
-  </div>
+      </header>
+    </div>
 
     <div class="push"></div>
-
 
     <!-- Footer -->
     <footer class="py-5 bg-black">
@@ -207,6 +111,41 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+    <script>
+      function noofdays(mm, yyyy) {
+        var daysofmonth;
+        if((mm == 4) || (mm ==6) || (mm ==9) || (mm == 11)) {
+          daysofmonth = 30;
+        }
+        else {
+          daysofmonth = 31;
+        }
+        if(mm == 2) {
+          if (yyyy/4 - parseInt(yyyy/4) != 0) {
+            daysofmonth = 28;
+          }
+          else {
+            if (yyyy/100 - parseInt(yyyy/100) != 0) {
+              daysofmonth = 29;
+            }
+            else {
+              If(yyyy/400 – parseInt(yyyy/400)!=0) { 
+                daysofmonth = 28
+              }
+              else {
+                daysofmonth =29;
+              }
+            }
+          }
+        }
+      return daysofmonth;
+    }
+    </script>
 
   </body>
 
