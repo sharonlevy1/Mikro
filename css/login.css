@@ -201,3 +201,10 @@ form.login a:hover {
 .form-title img {
 	width: 20%;
 }
+
+
+
+
+.g-signin2 {
+    border: 3px #fff solid;
+}
