@@ -11,13 +11,17 @@ h2 {
 }
 
 form {
-/*	padding-top: 5%;*/
+	padding-top: 5%;
 	direction: rtl;
 	text-align: right;
-/*	margin-right: 20%;*/
+	margin-right: 20%;
 }
 
-/*.formButtons {
+.formButtons {
 	margin-right: 30%;
 	margin-top: 5%;
-}*/
+}
+
+header.masthead {
+	padding-bottom: 5%;
+}
