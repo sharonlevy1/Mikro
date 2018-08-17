@@ -9,6 +9,11 @@ html, body {
   /* But also accounting for potential margin-bottom of last child */
   margin-bottom: -50px;
 }
+
+h2 {
+  font-family: 'Arimo', sans-serif;
+}
+
 .footer,
 .push {
   height: 50px;
