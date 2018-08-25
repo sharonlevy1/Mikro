@@ -6,18 +6,6 @@ body {
 	font-size: 1.5 em;
 }
 
-form {
-	padding-top: 5%;
-	direction: rtl;
-	text-align: right;
-	margin-right: 20%;
-}
-
-.formButtons {
-	margin-right: 30%;
-	margin-top: 5%;
-}
-
 header.masthead {
 	padding-bottom: 5%;
 }

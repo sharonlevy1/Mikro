@@ -7,7 +7,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>New Worker</title>
+    <title>Open Timeframe</title>
     <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -31,7 +31,7 @@
 
     <!-- Additional CSS -->
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/newWorker.css">
+    <link rel="stylesheet" type="text/css" href="css/open.css">
 
     <!-- jQuery UI -->
     <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
@@ -88,23 +88,6 @@
       });
     </script>
 
-    <script type="text/javascript" >  
-     function enableDisable(){  
-          if(document.getElementById("sameDay").checked == true) {  
-            document.getElementById("end").disabled = true;
-            document.getElementById("morning").disabled = false;
-            document.getElementById("noon").disabled = false;
-            document.getElementById("evening").disabled = false;
-          } 
-          else {
-            document.getElementById("end").disabled = false;
-            document.getElementById("morning").disabled = true;
-            document.getElementById("noon").disabled = true;
-            document.getElementById("evening").disabled = true;
-          }  
-        }  
-    </script>
-
   </head>
 
   <body>
@@ -147,24 +130,14 @@
           <div class="container">
             <div class="row">
               <div class="col-12">
-                <h2 class="masthead-subheading mb-0">יצירת עובד</h2>
+                <h2 class="masthead-subheading mb-0">פתח חלון זמנים</h2>
 
-                <form name="constraints" action="#" method="POST">
-                  <p><label>מספר תעודת זהות: <input type="number" name="id" maxlength="10"></label></p>
-                  <p><label>שם פרטי: <input type="text" name="firstName"></label></p>
-                  <p><label>שם משפחה: <input type="text" name="lastName"></label></p>
-                  <p><label>כתובת מייל: <input type="email" name="email"></label></p>
-                  <p><label>מספר טלפון: <input type="tel" name="phone"></label></p>
-                  <p>סטטוס: 
-                    <select>
-                      <option>פעיל</option>
-                      <option>לא פיעל</option>
-                    </select>
-                  </p>           
-                  
+                <form name="timeframe" action="#" method="POST">
+                  <p>תאריך פתיחת חלון זמנים: <input type="text" id="start" class="datepicker"></p>
+                  <p>תאריך סגירת חלון זמנים: <input type="text" id="end" class="datepicker"></p>
 
                   <div class="formButtons form-group">
-                    <button name="submit" type="submit" onclick="#">שמור</button>
+                    <button name="submit" type="submit" onclick="#">פתח חלון זמנים</button>
                     <button type="reset" value="Reset">איפוס</button>
                     <button name="cancel" onclick="cancel">ביטול</button>
 
@@ -179,6 +152,8 @@
 
     <div class="push"></div>
 
+
+
     <!-- Footer -->
     <footer class="py-5 bg-black">
       <div class="container">
@@ -187,13 +162,6 @@
       <!-- /.container -->
     </footer>
 
-<!-- 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
- -->
   </body>
 
 </html>
