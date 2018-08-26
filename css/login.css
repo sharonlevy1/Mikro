@@ -50,6 +50,7 @@ p.form-title {
 form {
     width: 250px;
     margin: 0 auto;
+    padding-top: 2%;
 }
 
 form.login input[type="text"], form.login input[type="password"] {
@@ -207,4 +208,8 @@ form.login a:hover {
 
 .g-signin2 {
     border: 3px #fff solid;
+}
+
+form a {
+    padding-left: 40%;
 }

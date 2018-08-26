@@ -32,19 +32,25 @@
 			<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 			<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
+			<!-- Google Account Login API -->
 			<script src="https://apis.google.com/js/platform.js" async defer></script>
+			<meta name="google-signin-client_id" content="683385568419-kub175nh9hod679frsf9pc16i91vtcnd.apps.googleusercontent.com">
+			<script>
+				function onSignIn(googleUser) {
+					var profile = googleUser.getBasicProfile();
+					console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+					console.log('Name: ' + profile.getName());
+					console.log('Image URL: ' + profile.getImageUrl());
+					console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+				}
 
-		<!-- 	<script>
-			 $(document).ready(function () {
-			    $('.forgot-pass').click(function(event) {
-			      $(".pr-wrap").toggleClass("show-pass-reset");
-			    }); 
-			    
-			    $('.pass-reset-submit').click(function(event) {
-			      $(".pr-wrap").removeClass("show-pass-reset");
-			    }); 
-			});
-			</script> -->
+				function signOut() {
+					var auth2 = gapi.auth2.getAuthInstance();
+					auth2.signOut().then(function () {
+						console.log('User signed out.');
+					});
+				}
+			</script>
 
 		</head>
 		<body>
@@ -63,34 +69,12 @@
 			            <div class="wrap">
 			                <p class="form-title"> <img src="img/logo.png"></p>
 			                <form class="login">
-		<!-- 	                	<input type="text" placeholder="Username" />
-			                	<input type="password" placeholder="Password" />
-			                	<input type="submit" value="Sign In" class="btn btn-success btn-sm" />
-			                	<div class="remember-forgot">
-			                		<div class="row">
-			                			<div class="col-md-6">	
-			                            <div class="checkbox">
-			                                <label>
-			                                    <input type="checkbox"/> Remember Me
-			                                </label>
-			                            </div>
-			                        </div>
-			                        <div class="col-md-6 forgot-pass-content">
-			                            <a href="javascription:void(0)" class="forgot-pass">Forgot Password</a>
-			                        </div>
-			                    </div>
-			                </div> -->
 
-			                <div>
-			                <button class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></button>
-			            </div>
-
-
+			                	<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+			                	<a href="#" onclick="signOut();">Sign out</a>
+			                	
 			                <div><div><div></div></div></div>
-		<!-- 	                <div class="g-signin2" data-onsuccess="onSignIn">
-			                	<img src="img/google_signin_buttons/web/2x/btn_google_signin_light_normal_web@2x.png" class="signin" onclick="">
-			                </div>
-			                <button class="g-signout" onclick="signOut();">Sign out</button> -->
+
 			                </form>
 			            </div>
 			        </div>
