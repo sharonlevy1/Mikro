@@ -1,13 +1,8 @@
-    
 <html>
-<head> 
-<meta charset="utf-8" />  
+<head>
+    <meta charset="utf-8" />
 </head>
-<style>
-html{
-    direction: rtl;
-}
-</style>
+<body>
 <?php
 
 header('Content-Type: text/html; charset=utf-8');
@@ -16,27 +11,21 @@ $username = "sharonsi_admin";
 $password = "mikro123456";
 $dbname="sharonsi_mikro";
 
-  
 // Create connection
- 
 $conn = new mysqli($servername, $username, $password,$dbname);
 
- 
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
-  mysqli_set_charset($conn,"utf8");
+}
+mysqli_set_charset($conn,"utf8");
 
-//getting details
-
-if ($_POST['isActive']=='yes')
-{
+//Getting details
+if ($_POST['isActive']=='yes') {
     $status="פעיל";
 }
 
-else
-{
+else {
     $ststus="לא פעיל";
 }
 
@@ -46,38 +35,45 @@ $lastName=$_POST['lastName'];
 $email=$_POST['email'];
 $phone=$_POST['phone'];
 
-  //insert actors details query
-  //phone is a choise
- if(!empty($id) && !empty($firstName)&&!empty($lastName)&&!empty($email)&&!empty($status)) 
- {
-   $insert = "INSERT INTO `actor` (firstName,lastName,id,email,status,phone) VALUES ( '$firstName', '$lastName','$id', '$email','$status','$phone')";
-  
-     if ($conn->query($insert) === FALSE) {
-     
-     echo " " . $conn->error;
-       }
-       
-      else
-      {
-           echo '<script language="javascript">';
-          echo 'alert( "העדכון בוצע בהצלחה!"  )';
-         echo '</script>'; 
-          
-      }
-      
- }  
-     
-   
- mysqli_close($conn);
- 
- //the page of manage workers isnt exsist yet
-//header("refresh:3; url=http://sharonsilviajle.mtacloud.co.il/yulia/manage_plays.php");
-exit;
+//checking if the "isManager" checkbox was checked
+if (isset($_POST['manager'])) {
 
-      
-      
-         
+    $is_admin=1;
+
+}        else {
+
+    $is_admin=0;
+}
+
+
+//insert actors details query
+//phone is a choise
+if(!empty($id) && !empty($firstName)&&!empty($lastName)&&!empty($email)&&!empty($status))
+{
+    $insert = "INSERT INTO `actor` (firstName,lastName,id,email,status,phone,is_admin) VALUES ( '$firstName', '$lastName','$id', '$email','$status','$phone','$is_admin')";
+
+    if ($conn->query($insert) === FALSE) {
+
+        echo " " . $conn->error;
+    }
+
+    else
+    {
+        echo '<script language="javascript">';
+        echo 'alert( "העדכון בוצע בהצלחה!"  )';
+        echo '</script>';
+        header("refresh:3; url=http://sharonsilviajle.mtacloud.co.il/yulia/workers_management.php");
+        exit;
+
+    }
+}
+mysqli_close($conn);
+
+
+
 ?>
+</body>
+</html>
     
     
     
