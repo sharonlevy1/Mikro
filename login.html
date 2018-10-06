@@ -1,125 +1,129 @@
 <!DOCTYPE HTML>
-<html>
-<head>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<html>
+		<head>
+			<title>Login to Mikro</title>
+			<meta charset="utf-8">
+		    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta name="google-signin-client_id" content="683385568419-kub175nh9hod679frsf9pc16i91vtcnd.apps.googleusercontent.com">
-
-	<title>התחברות</title>
-
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/one-page-wonder.min.css" rel="stylesheet">
-
-    <!-- Additional CSS -->
-    <link rel="stylesheet" type="text/css" href="css/login.css">
+		    <meta name="google-signin-scope" content="profile email">
+		    <meta name="google-signin-client_id" content="683385568419-kub175nh9hod679frsf9pc16i91vtcnd.apps.googleusercontent.com">
 
 
-	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+		    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
 
-	<script src="https://apis.google.com/js/platform.js" async defer></script>
 
-<script>
- $(document).ready(function () {
-    $('.forgot-pass').click(function(event) {
-      $(".pr-wrap").toggleClass("show-pass-reset");
-    }); 
-    
-    $('.pass-reset-submit').click(function(event) {
-      $(".pr-wrap").removeClass("show-pass-reset");
-    }); 
-});
-</script>
+		    <!-- Bootstrap core CSS -->
+		    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-</head>
-<body>
-	<div class="wrapper">
-		<div class="container">
-			<div class="row">
-			  <div class="col-md-12">
-	            <div class="pr-wrap">
-	                <div class="pass-reset">
-	                    <label>
-	                        Enter the email you signed up with</label>
-	                    <input type="email" placeholder="Email" />
-	                    <input type="submit" value="Submit" class="pass-reset-submit btn btn-success btn-sm" />
-	                </div>
-	            </div>
-	            <div class="wrap">
-	                <p class="form-title"> <img src="img/logo.png"></p>
-	                <form class="login">
-<!-- 	                	<input type="text" placeholder="Username" />
-	                	<input type="password" placeholder="Password" />
-	                	<input type="submit" value="Sign In" class="btn btn-success btn-sm" />
-	                	<div class="remember-forgot">
-	                		<div class="row">
-	                			<div class="col-md-6">	
-	                            <div class="checkbox">
-	                                <label>
-	                                    <input type="checkbox"/> Remember Me
-	                                </label>
-	                            </div>
-	                        </div>
-	                        <div class="col-md-6 forgot-pass-content">
-	                            <a href="javascription:void(0)" class="forgot-pass">Forgot Password</a>
-	                        </div>
-	                    </div>
-	                </div> -->
-	                <div class="g-signin2" data-onsuccess="onSignIn">
-	                	<img src="img/google_signin_buttons/web/2x/btn_google_signin_light_normal_web@2x.png" class="signin" onclick="">
-	                </div>
-	                <button class="g-signout" onclick="signOut();">Sign out</button>
-	                </form>
-	            </div>
-	        </div>
-	    </div>
-	</div>
-</div>
+		    <!-- Custom fonts for this template -->
+		    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
 
-	<div class="push"></div>
+		    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+		    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
 
-    <!-- Footer -->
-    <footer class="py-5 bg-black">
-      <div class="container">
-        <p class="m-0 text-center text-white small">Copyright &copy; Your Website 2018</p>
-      </div>
-      <!-- /.container -->
-    </footer>
+		    <!-- Custom styles for this template -->
+		    <link href="css/one-page-wonder.min.css" rel="stylesheet">
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		    <!-- Additional CSS -->
+		    <link rel="stylesheet" type="text/css" href="css/login.css">
 
-    <script>
-    	function onSignIn(googleUser) {
-    		var profile = googleUser.getBasicProfile();
-    		console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-    		console.log('Name: ' + profile.getName());
-    		console.log('Image URL: ' + profile.getImageUrl());
-    		console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-    	}
-    </script>
 
-    <script>
-    	function signOut() {
-    		var auth2 = gapi.auth2.getAuthInstance();
-    		auth2.signOut().then(function () {
-    			console.log('User signed out.');
-    		});
-    	}
-    </script>
+			<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+			<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+			<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
-</body>
-</html>
+			<!-- Google Account Login API -->
+			<script src="https://apis.google.com/js/platform.js" async defer></script>
+			<meta name="google-signin-client_id" content="683385568419-kub175nh9hod679frsf9pc16i91vtcnd.apps.googleusercontent.com">
+			<script>
+				function onSignIn(googleUser) {
+					var profile = googleUser.getBasicProfile();
+					console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+					console.log('Name: ' + profile.getName());
+					console.log('Image URL: ' + profile.getImageUrl());
+					console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+				}
+
+				function signOut() {
+					var auth2 = gapi.auth2.getAuthInstance();
+					auth2.signOut().then(function () {
+						console.log('User signed out.');
+					});
+				}
+			</script>
+
+		</head>
+		<body>
+			<div class="wrapper">
+				<div class="container">
+					<div class="row">
+					  <div class="col-md-12">
+			            <div class="pr-wrap">
+			                <div class="pass-reset">
+			                    <label>
+			                        Enter the email you signed up with</label>
+			                    <input type="email" placeholder="Email" />
+			                    <input type="submit" value="Submit" class="pass-reset-submit btn btn-success btn-sm" />
+			                </div>
+			            </div>
+			            <div class="wrap">
+			                <p class="form-title"> <img src="img/logo.png"></p>
+			                <form class="login">
+
+			                	<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+			                	<a href="#" onclick="signOut();">Sign out</a>
+			                	
+			                <div><div><div></div></div></div>
+
+			                </form>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		</div>
+
+			<div class="push"></div>
+
+		    <!-- Footer -->
+		    <footer class="py-5 bg-black">
+		      <div class="container">
+		        <p class="m-0 text-center text-white small">Copyright &copy; Your Website 2018</p>
+		      </div>
+		      <!-- /.container -->
+		    </footer>
+
+		    <!-- Bootstrap core JavaScript -->
+		    <script src="vendor/jquery/jquery.min.js"></script>.
+		    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+		    <script>
+		      function onSignIn(googleUser) {
+		        // Useful data for your client-side scripts:
+		        var profile = googleUser.getBasicProfile();
+		        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+		        console.log('Full Name: ' + profile.getName());
+		        console.log('Given Name: ' + profile.getGivenName());
+		        console.log('Family Name: ' + profile.getFamilyName());
+		        console.log("Image URL: " + profile.getImageUrl());
+		        console.log("Email: " + profile.getEmail());
+
+		        // The ID token you need to pass to your backend:
+		        var id_token = googleUser.getAuthResponse().id_token;
+		        console.log("ID Token: " + id_token);
+		      };
+		    </script>
+
+		    <script>
+		    	function signOut() {
+		    		var auth2 = gapi.auth2.getAuthInstance();
+		    		auth2.signOut().then(function () {
+		    			console.log('User signed out.');
+		    		});
+		    	}
+		    </script>
+
+		</body>
+	</html>

@@ -1,0 +1,11 @@
+body {
+	font-family: 'Arimo', sans-serif;
+}
+
+.header.masthead .masthead-content .masthead-subheading {
+	font-size: 1.5 em;
+}
+
+header.masthead {
+	padding-bottom: 5%;
+}

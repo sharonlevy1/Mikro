@@ -9,6 +9,11 @@ html, body {
   /* But also accounting for potential margin-bottom of last child */
   margin-bottom: -50px;
 }
+
+h2, body {
+  font-family: 'Arimo', sans-serif;
+}
+
 .footer,
 .push {
   height: 50px;
@@ -61,3 +66,14 @@ header.masthead {
 }
 
 
+form {
+  padding-top: 5%;
+  direction: rtl;
+  text-align: right;
+  margin-right: 20%;
+}
+
+.formButtons {
+  margin-right: 30%;
+  margin-top: 5%;
+}

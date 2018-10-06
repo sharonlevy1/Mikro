@@ -1,0 +1,28 @@
+{
+  "name": "pbcalendar",
+  "version": "1.0.0",
+  "description": "Simple calendar library for jQuery",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-less": "^1.1.0",
+    "grunt-contrib-uglify": "^0.11.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-less-imports": "^1.1.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-less": "^1.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pnbro/pbcalendar"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paul & Bro Company",
+  "license": "MIT",
+  "homepage": "pnbro.com"
+}
